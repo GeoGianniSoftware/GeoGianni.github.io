@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={"index.js -> ../src/components/sections/RecentWorks":{id:6227,files:["static/chunks/391.c7d6e123206c3589.js","static/chunks/227.d48d2cbace2f07a4.js"]}}
+self.__REACT_LOADABLE_MANIFEST={"index.js -> ../src/components/sections/RecentWorks":{"id":"index.js -> ../src/components/sections/RecentWorks","files":["static/chunks/src_components_sections_RecentWorks_js.js"]}}

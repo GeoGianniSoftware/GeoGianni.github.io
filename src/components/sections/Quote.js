@@ -18,11 +18,12 @@ const Quote = () => {
               </div>
               <div className="user">
                 <div className="img">
-                  <img src="images/man1.jpg" alt="Harvey Mackay" />
+                  <img src="images/TynanSylvester.jpg" alt="Tynan Sylvester" />
                 </div>
                 <div className="info">
                   <div className="name">Tynan Sylvester</div>
                   <div className="company">Game Developer</div>
+                  <div className="game">Rimworld</div>
                 </div>
                 <div className="clear" />
               </div>

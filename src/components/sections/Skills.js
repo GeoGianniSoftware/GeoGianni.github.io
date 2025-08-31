@@ -7,85 +7,27 @@ const Slice = () => (
   </div>
 );
 
+const ALL_SKILLS = [
+  // Specializations
+  "Unity3D","Multiplayer","Game AI","Game Systems","Game Tools & Utilities",
+  "JSON & SQL Databases","Level Design","UI/UX","3D Modeling",
+  // Programming
+  "C#","Java","C++","JavaScript","HTML","CSS","HLSL",
+];
+
 const Skills = () => {
   return (
-    <Fragment>
+<Fragment>
       <div className="content skills">
-        {/* title */}
         <div className="title">Skills</div>
-        {/* content */}
-        <div className="row">
-          
-          {/* skill item */}
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
-            <div className="skills-list list">
-              <div className="skill-title border-line-h">
-                <div className="icon">
-                  <i className="fa fa-code" />
-                </div>
-                <div className="name">Languages</div>
-              </div>
-              <ul>
-                <li>
-                <div className="code"><b>Java</b>: <em>13 years</em></div>
-                </li>
-                <li>
-                  <div className="code"><b>C++</b>: <em>13 years</em></div>
-                </li>
-                <li>
-                  <div className="code"><b>C#</b>: <em>11 years</em></div>
-                </li>
-                <li>
-                  <div className="code"><b>JS</b>: <em>10 years</em></div>
-                </li>
-                <li>
-                  <div className="code"><b>CSS</b>: <em>7 years</em></div>
-                </li>
-                <li>
-                  <div className="code"><b>HTML</b>: <em>6 years</em></div>
-                </li>
-                <li>
-                  <div className="code"><b>HLSL</b>: <em>4 years</em></div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          {/* skill item */}
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
-            <div className="skills-list list">
-              <div className="skill-title border-line-h">
-                <div className="icon">
-                  <i className="fa fa-star-o" />
-                </div>
-                <div className="name">Specializations</div>
-              </div>
-              <ul>
-              <li>
-                  <div className="name">Game AI </div>
-                </li>
-                <li>
-                  <div className="name">Game Systems</div>
-                </li>
-                <li>
-                  <div className="name">Game Tools & Utilities</div>
-                </li>
-                <li>
-                  <div className="name">JSON & SQL Databases</div>
-                </li>
-                <li>
-                  <div className="name">Level Design</div>
-                </li>
-                <li>
-                  <div className="name">UI/UX</div>
-                </li>
-                <li>
-                  <div className="name">3D Modeling</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="clear" />
+
+        {/* single wide section */}
+        <div className="skills-wide border-line-h">
+          <ul className="skills-strip">
+            {ALL_SKILLS.map((s) => (
+              <li key={s} className="skill-chip">{s}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </Fragment>

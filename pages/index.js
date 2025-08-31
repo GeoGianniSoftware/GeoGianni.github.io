@@ -31,7 +31,14 @@ const RecentWorks = dynamic(
 const bio = `
 <div>
 <p>
-My name is <b>Gianni Rivero</b> and I am a <u>Senior Unity Developer</u>
+My name is <span class="highlight-name">Gianni Rivero</span>,
+<br><br>
+I am a Senior Game Developer specializing in Unity with expertise in multiplayer systems, tools engineering, and content pipelines.
+<br><br>
+I've led cross-disciplinary teams, built core infrastructure with Photon's Quantum 3 Deterministic Multiplayer Engine,
+and delivered large scale player-facing features from quests and NPC systems to level design workflows.
+<br><br>
+My work has supported successful partnerships and helped secure multi-million dollar investment.</u>
 </p>
 </div>
 `;
@@ -53,21 +60,22 @@ const IndexDark = () => {
           <div className="title">Geo Gianni Games</div>
           <TypingAnimation />
           <div className="social">
-            <a target="_blank" rel="noreferrer" href="https://github.com/GeoGianniSoftware">
-              <span className="fa fa-github" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/gianni-rivero/">
-              <span className="fa fa-linkedin" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://www.twitch.tv/geogianni">
-              <span className="fa fa-twitch" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@geogiannigames">
-              <span className="fa fa-youtube" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/geogiannigames/">
-              <span className="fa fa-instagram" />
-            </a>
+            
+          {/* centered GitHub button */}
+<div className="github-row">
+  <a
+    href="https://github.com/GeoGianniSoftware"
+    target="_blank"
+    rel="noreferrer"
+    className="github-btn"
+    aria-label="View my GitHub profile"
+  >
+    <i className="fa fa-github" aria-hidden="true" />
+    <span> My GitHub</span>
+  </a>
+</div>
+
+
           </div>
           {/* profile buttons */}
           <div className="lnks">
@@ -91,8 +99,8 @@ const IndexDark = () => {
           <Pricing />
         </About>
         <Resume>
-          <ResumeSection />
           <Skills />
+          <ResumeSection />
         </Resume>
         <Work>
           <RecentWorks />

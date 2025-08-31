@@ -31,6 +31,25 @@ const Testimonials = () => {
               <SwiperSlide className="item">
                 <div className="revs-item">
                   <div className="text">
+                  The quality of Geo's work speaks for itself. He's capable of creating base systems
+                  but also capable of polishing those systems up into something that truly shines and
+                  gives the player the best possible experience.
+                  </div>
+                  <div className="user">
+                    <div className="img">
+                      <img src="images/clients/Pixelbera.png" alt="" />
+                    </div>
+                    <div className="info">
+                      <div className="name">Pixelbera</div>
+                      <div className="company"><b>Creative Director / Co-Founder </b><br></br>BeraTone</div>
+                    </div>
+                    <div className="clear" />
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="item">
+                <div className="revs-item">
+                  <div className="text">
                   Geo's capability for independent work was consistently impressive. His strong understanding of
                   C# and Unity allowed him to produce high quality systems which we still utilize in “Fire &
                   Maneuver.” His work was always of the highest quality, reflecting his understanding and
@@ -38,7 +57,7 @@ const Testimonials = () => {
                   </div>
                   <div className="user">
                     <div className="img">
-                      <img src="images/clients/griffin.png" alt="" />
+                      <img src="images/clients/Griffin.png" alt="" />
                     </div>
                     <div className="info">
                       <div className="name">Griffin Johnsen</div>
@@ -57,7 +76,7 @@ const Testimonials = () => {
                   </div>
                   <div className="user">
                     <div className="img">
-                      <img src="images/clients/aaron.png" alt="" />
+                      <img src="images/clients/Aaron.png" alt="" />
                     </div>
                     <div className="info">
                       <div className="name">Aaron Legault</div>

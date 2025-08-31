@@ -8,6 +8,213 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Centering wrapper */
+.github-row{
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Isolated button (ignores .lnk rules) */
+.github-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 12px;               /* compact height */
+  line-height: 1.2;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: none;             /* stop ALL CAPS */
+  text-decoration: none;
+
+  color: #eaeaea;                   /* readable text */
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--main-site-resume-a);
+  border-radius: 8px;
+
+  width: auto;
+  max-width: max-content;
+  margin-inline: auto;              /* extra centering safety */
+  transition: background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+.github-btn .fa-github{
+  font-size: 16px;
+  color: currentColor;              /* icon follows text color */
+  flex-shrink: 0;
+}
+
+/* Hover: subtle red tint, NOT solid red */
+.github-btn:hover{
+  background: color-mix(in srgb, var(--main-site-resume-a) 18%, transparent);
+  color: #ffffff;                   /* high contrast on hover */
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--main-site-resume-a) 35%, transparent);
+}
+
+/* If any global rule still wins, hard-stop it */
+.github-btn, .github-btn:hover{
+  background-clip: padding-box;
+}
+
+
+
+.top-menu .icon{ flex: 0 0 22px; display: inline-flex; justify-content: center; }
+.top-menu .icon > * { pointer-events: none; }         /* optional */
+.top-menu .icon { white-space: nowrap; }              /* but better: separate spans as above */
+
+
+/* Wide horizontal skills section */
+.skills-wide {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+/* Optional icon to match your existing style */
+.skills-wide__icon {
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+/* Flexible chip list */
+.skills-strip {
+  display: flex;
+  flex-wrap: wrap;           /* wrap on large screens */
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual chips */
+.skill-chip {
+  padding: 8px 12px;
+  border-left: 3px solid var(--main-site-resume-a);
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.04);
+  font-weight: 600;
+}
+
+.highlight-name {
+  font-weight: 700;
+  color: #fff; /* or var(--main-site-text-light) if you have one */
+}
+
+.status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--main-site-resume-a);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--main-site-resume-a) 50%, transparent);
+  animation: pulse 2s infinite;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;          /* <-- space between ribbon and badge */
+  flex-basis: 100%;   /* forces it onto its own row */
+  margin-top: 12px;   /* extra breathing room from the line above */
+}
+
+.status-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--main-site-resume-a);
+  border-radius: 6px;
+  position: relative;
+}
+
+.status-ribbon::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: var(--main-site-resume-a);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid color-mix(in srgb, var(--main-site-resume-a) 55%, transparent);
+  font-weight: 700;
+}
+
+
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0   color-mix(in srgb, var(--main-site-resume-a) 50%, transparent); }
+  70%  { box-shadow: 0 0 0 10px color-mix(in srgb, var(--main-site-resume-a) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0   color-mix(in srgb, var(--main-site-resume-a) 0%, transparent); }
+}
+
+
+.info-break {
+  flex-basis: 100%; /* forces a new row */
+  height: 16px;     /* adds vertical gap */
+  list-style: none;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Row-based list */
+.about-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px; /* row gap, column gap */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styled label */
+.info-label {
+  background: var(--main-site-resume-a); /* your red */
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+/* Value stays normal */
+.info-value {
+  color: #ddd;
+  font-weight: 400;
+}
+
+
+/* Tighten on mobile */
+@media (max-width: 640px) {
+  .skill-chip { padding: 6px 10px; font-weight: 600; }
+}
+
+/* If you prefer pure horizontal scrolling instead of wrapping, 
+   swap flex-wrap: wrap for the two lines below: */
+/*
+.skills-strip { flex-wrap: nowrap; overflow-x: auto; }
+.skills-strip::-webkit-scrollbar { height: 6px; }
+*/
+
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
   background-color: transparent;
