@@ -79,7 +79,7 @@ const IndexDark = () => {
           </div>
           {/* profile buttons */}
           <div className="lnks">
-            <a href="https://geogianni.com/assets/docs/resume.pdf" download="GeoGianniGamesResume" target="_blank" className="lnk">
+            <a href="https://geogianni.com/assets/docs/GianniRiveroResume.docx" download="GeoGianniGamesResume" target="_blank" className="lnk">
               <span className="text">Download CV</span>
               <span class="ion ion-ios-cloud-download"></span>
             </a>
