@@ -7,10 +7,10 @@ const TypingAnimation = ({ data }) => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: data ? data : ["Senior Unity Developer", "Game Consultant", "Freelancer"], // Strings to display
-      typeSpeed: 100,
+      strings: data ? data : ["Senior Unity Developer", "Game Consultant", "Freelancer", "Senior Unity Engineer"], // Strings to display
+      typeSpeed: 60,
       backSpeed: 50,
-      backDelay: 100,
+      backDelay: 150,
       smartBackspace: true,
       loop: true,
       showCursor: false,

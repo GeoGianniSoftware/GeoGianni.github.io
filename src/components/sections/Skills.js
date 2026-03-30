@@ -8,11 +8,26 @@ const Slice = () => (
 );
 
 const ALL_SKILLS = [
-  // Specializations
-  "Unity3D","Multiplayer","Game AI","Game Systems","Game Tools & Utilities",
-  "JSON & SQL Databases","Level Design","UI/UX","3D Modeling",
-  // Programming
-  "C#","Java","C++","JavaScript","HTML","CSS","HLSL",
+  // Core Specialization (TOP SIGNAL)
+  "Unity Performance Optimization",
+  "Systems Architecture",
+  "Multiplayer Systems",
+  "Open World Streaming",
+  "LOD Systems",
+  "Rendering Optimization",
+
+  // Supporting Systems
+  "Data-Driven Systems",
+  "Tooling & Pipeline Development",
+  "Gameplay Systems",
+  "Deterministic Networking",
+  "ECS Architectures",
+
+  // Technical Stack (minimal, intentional)
+  "Unity3D",
+  "C#",
+  "HLSL",
+  "Photon Quantum"
 ];
 
 const Skills = () => {

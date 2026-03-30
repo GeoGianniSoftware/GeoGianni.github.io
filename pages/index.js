@@ -96,7 +96,7 @@ const IndexDark = () => {
           <Services />
           <Clients />
           <Testimonials />
-          <Pricing />
+          {/*<Pricing />*/}
         </About>
         <Resume>
           <Skills />
