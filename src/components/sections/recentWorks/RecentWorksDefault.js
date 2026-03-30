@@ -85,6 +85,44 @@ const RecentWorksDefault = () => {
         {/* content */}
         
         <div className="row grid-items border-line-v"> {/* Fire & Maneuver */}
+          {/* Hood Tales */}
+          <div className="col col-d-6 col-t-6 col-m-12 grid-item game border-line-h">
+            <div className="box-item">
+              <div className="image">
+                <a href="#popup-2" className="has-popup-media">
+                  <img src="images/works/thumbs/HoodTales.png" alt="" />
+                  <span className="info">
+                    <span className="ion ion-eye" />
+                  </span>
+                </a>
+                <div id="popup-2" className="popup-box mfp-fade mfp-hide">
+                  <div className="content">
+                    <div className="image">
+                      <img src="images/works/thumbs/HoodTales.png" alt="" />
+                    </div>
+                    <div className="desc">
+                      <div className="post-box">
+                        <h1>Hood Tales: Morocco</h1>
+                        <div className="blog-detail">Video Game</div>
+                        <div className="blog-content">
+                        </div>
+                        <a href="https://store.steampowered.com/app/3578550/Hood_Tales_Part_1_Morocco/" target="_blank" className="button">
+                          <span className="text">View Project Page</span>
+                          <span className="arrow" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="desc">
+                <a href="#popup-2" className="name has-popup-media">
+                  Hood Tales: Morocco
+                </a>
+                <div className="category">Game</div>
+              </div>
+            </div>
+          </div>
 
           {/* BeraTone */}
           <div className="col col-d-6 col-t-6 col-m-12 grid-item game border-line-h">
@@ -104,13 +142,11 @@ const RecentWorksDefault = () => {
                     <div className="desc">
                       <div className="post-box">
                         <h1>BeraTone</h1>
-                        <div className="blog-detail">Design</div>
+                        <div className="blog-detail">Video Game</div>
                         <div className="blog-content">
-                          <img src="images/works/work_beratone0.jpg" alt="" />
-                          
                         </div>
                         <a href="https://www.beratone.game/en-US" target="_blank" className="button">
-                          <span className="text">View Project</span>
+                          <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>
                       </div>
@@ -145,13 +181,11 @@ const RecentWorksDefault = () => {
                     <div className="desc">
                       <div className="post-box">
                         <h1>Fire & Maneuver</h1>
-                        <div className="blog-detail">Design</div>
+                        <div className="blog-detail">Video Game</div>
                         <div className="blog-content">
-                          <img src="images/works/work2.jpg" alt="" />
-                          
                         </div>
                         <a href="https://store.steampowered.com/app/1679290/Fire__Maneuver/" target="_blank" className="button">
-                          <span className="text">View Project</span>
+                          <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>
                       </div>
@@ -162,51 +196,6 @@ const RecentWorksDefault = () => {
               <div className="desc">
                 <a href="#popup-2" className="name has-popup-media">
                   Fire & Maneuver
-                </a>
-                <div className="category">Game</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Light's Last Hope*/}
-          <div className="col col-d-6 col-t-6 col-m-12 grid-item game border-line-h">
-            <div className="box-item">
-              <div className="image">
-                <a href="#popup-2" className="has-popup-media">
-                  <img src="images/works/thumbs/LightsLastHope.png" alt="" />
-                  <span className="info">
-                  <span className="ion ion-eye" />
-                  </span>
-                </a>
-                <div id="popup-2" className="popup-box mfp-fade mfp-hide">
-                  <div className="content">
-                    <div className="image">
-                      <img src="images/works/thumbs/LightsLastHope.png" alt="" />
-                    </div>
-                    <div className="desc">
-                      <div className="post-box">
-                        <h1>Light's Last Hope</h1>
-                        <div className="blog-detail">Design</div>
-                        <div className="blog-content">
-                        <div class="video-background"> 
-                          <div class="video-foreground">
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/oPyx4JRCQ88?si=9iUf4lgHEzyr9XDY" title="SNL Clip" frameBorder="0" allowFullScreen></iframe>
-                          </div>
-                        </div>
-                          
-                        </div>
-                        <a href="https://geogianni.itch.io/lights-last-hope" target="_blank" className="button">
-                          <span className="text">View Project</span>
-                          <span className="arrow" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="desc">
-                <a href="#popup-2" className="name has-popup-media">
-                  Light's Last Hope
                 </a>
                 <div className="category">Game</div>
               </div>
@@ -231,13 +220,11 @@ const RecentWorksDefault = () => {
                     <div className="desc">
                       <div className="post-box">
                         <h1>The Final Bastion</h1>
-                        <div className="blog-detail">Design</div>
+                        <div className="blog-detail">Video Game</div>
                         <div className="blog-content">
-                          <img src="images/works/work2.jpg" alt="" />
-                          
                         </div>
                         <a href="https://store.steampowered.com/app/2193630/The_Final_Bastion/?beta=0" target="_blank" className="button">
-                          <span className="text">View Project</span>
+                          <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>
                       </div>
@@ -272,7 +259,7 @@ const RecentWorksDefault = () => {
                     <div className="desc">
                       <div className="post-box">
                         <h1>Saturday Night Live</h1>
-                        <div className="blog-detail">Design</div>
+                        <div className="blog-detail">Television Show</div>
                         <div className="blog-content">
                         <div class="video-background"> 
                           <div class="video-foreground">
@@ -282,7 +269,7 @@ const RecentWorksDefault = () => {
                           
                         </div>
                         <a href="https://www.youtube.com/watch?v=oPyx4JRCQ88" target="_blank" className="button">
-                          <span className="text">View Project</span>
+                          <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>
                       </div>
@@ -295,6 +282,45 @@ const RecentWorksDefault = () => {
                   Saturday Night Live
                 </a>
                 <div className="category">Content</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Light's Last Hope*/}
+          <div className="col col-d-6 col-t-6 col-m-12 grid-item game border-line-h">
+            <div className="box-item">
+              <div className="image">
+                <a href="#popup-2" className="has-popup-media">
+                  <img src="images/works/thumbs/LightsLastHope.png" alt="" />
+                  <span className="info">
+                  <span className="ion ion-eye" />
+                  </span>
+                </a>
+                <div id="popup-2" className="popup-box mfp-fade mfp-hide">
+                  <div className="content">
+                    <div className="image">
+                      <img src="images/works/thumbs/LightsLastHope.png" alt="" />
+                    </div>
+                    <div className="desc">
+                      <div className="post-box">
+                        <h1>Light's Last Hope</h1>
+                        <div className="blog-detail">Video Game</div>
+                        <div className="blog-content">
+                        </div>
+                        <a href="https://geogianni.itch.io/lights-last-hope" target="_blank" className="button">
+                          <span className="text">View Project Page</span>
+                          <span className="arrow" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="desc">
+                <a href="#popup-2" className="name has-popup-media">
+                  Light's Last Hope
+                </a>
+                <div className="category">Game</div>
               </div>
             </div>
           </div>
@@ -317,17 +343,11 @@ const RecentWorksDefault = () => {
                     <div className="desc">
                       <div className="post-box">
                         <h1>Bridge Render</h1>
-                        <div className="blog-detail">Design</div>
+                        <div className="blog-detail">Render</div>
                         <div className="blog-content">
-                        <div class="video-background"> 
-                          <div class="video-foreground">
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/66JUuQMb_TM?si=aQIEB0vrh-hHGphZ" title="Bridge Clip" frameBorder="0" allowFullScreen></iframe>
-                          </div>
-                        </div>
-                          
                         </div>
                         <a href="https://youtu.be/66JUuQMb_TM" target="_blank" className="button">
-                          <span className="text">View Project</span>
+                          <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>
                       </div>
@@ -362,17 +382,11 @@ const RecentWorksDefault = () => {
                     <div className="desc">
                       <div className="post-box">
                         <h1>Florida Coral Reef</h1>
-                        <div className="blog-detail">Design</div>
+                        <div className="blog-detail">Simulation</div>
                         <div className="blog-content">
-                        <div class="video-background"> 
-                          <div class="video-foreground">
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/oPyx4JRCQ88?si=9iUf4lgHEzyr9XDY" title="SNL Clip" frameBorder="0" allowFullScreen></iframe>
-                          </div>
-                        </div>
-                          
                         </div>
                         <a href="#" className="button">
-                          <span className="text">View Project</span>
+                          <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>
                       </div>
@@ -407,17 +421,11 @@ const RecentWorksDefault = () => {
                     <div className="desc">
                       <div className="post-box">
                         <h1>The River of Grass</h1>
-                        <div className="blog-detail">Design</div>
+                        <div className="blog-detail">Simulation</div>
                         <div className="blog-content">
-                        <div class="video-background"> 
-                          <div class="video-foreground">
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/oPyx4JRCQ88?si=9iUf4lgHEzyr9XDY" title="SNL Clip" frameBorder="0" allowFullScreen></iframe>
-                          </div>
-                        </div>
-                          
                         </div>
                         <a href="#" className="button">
-                          <span className="text">View Project</span>
+                          <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>
                       </div>
