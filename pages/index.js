@@ -28,6 +28,23 @@ const RecentWorks = dynamic(
     ssr: false,
   }
 );
+
+const bioNew = `
+<div>
+<p>
+My name is <span class="highlight-name">Gianni Rivero</span>,
+I am a Senior Unity Engineer specializing in performance optimization, systems architecture, and multiplayer.
+<br><br>
+I've worked across full production pipelines, building core infrastructure with Photon's Quantum 3 deterministic multiplayer engine, leading cross-disciplinary teams,
+and delivering large-scale player-facing systems from quests and NPC behaviors to world and gameplay frameworks.
+<br><br>
+More recently, my work has focused on stabilizing and scaling complex Unity projects-reworking legacy systems, improving performance, and solving architectural bottlenecks at production scale.
+<br><br>
+My contributions have supported successful partnerships and secured projects multi-million dollar investment.
+</p>
+</div>
+`;
+
 const bio = `
 <div>
 <p>
@@ -92,7 +109,7 @@ const IndexDark = () => {
       </Home>
       <ContentContainer>
         <About>
-          <AboutMe bio={bio} />
+          <AboutMe bio={bioNew} />
           <Services />
           <Clients />
           <Testimonials />
