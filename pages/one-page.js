@@ -53,7 +53,7 @@ const OnePageDashboard = () => {
         <title>GeoGianni Games - 1-Pager Dashboard</title>
       </Head>
 
-      {/* Left Column: Fixed Profile Card */}
+      {/* ROW 1 TOP: Profile Card (spans all 3 columns) */}
       <div className="card-started" id="home-card">
         <div className="profile no-photo">
           <div
@@ -62,9 +62,8 @@ const OnePageDashboard = () => {
           />
           <div className="title">Geo Gianni Games</div>
           <TypingAnimation />
-          
+
           <div className="social">
-            {/* centered GitHub button with Tabbed View toggle */}
             <div className="github-row" style={{ display: "flex", gap: "12px", justifyContent: "center", marginTop: "10px" }}>
               <a
                 href="https://github.com/GeoGianniSoftware"
@@ -102,60 +101,56 @@ const OnePageDashboard = () => {
         </div>
       </div>
 
-      {/* Right Column: Bento Grid of all sections */}
-      <div className="dashboard-content-grid">
-        
-        {/* Card 1: About Me */}
-        <div className="bento-card card-about">
-          <div className="bento-card-header">
-            <i className="fa fa-user-o" aria-hidden="true"></i>
-            <span>About Me</span>
-          </div>
-          <div className="bento-card-content">
-            <AboutMe bio={bioNew} />
-            <Services />
-            <Clients />
-            <Testimonials />
-          </div>
+      {/* ROW 2 LEFT: Recent Works */}
+      <div className="bento-card card-works">
+        <div className="bento-card-header">
+          <i className="fa fa-user-o" aria-hidden="true"></i>
+          <span>About Me</span>
         </div>
-
-        {/* Card 2: Skills & Resumé */}
-        <div className="bento-card card-resume">
-          <div className="bento-card-header">
-            <i className="fa fa-list-alt" aria-hidden="true"></i>
-            <span>Skills & Resumé</span>
-          </div>
-          <div className="bento-card-content">
-            <Skills />
-            <ResumeSection />
-          </div>
+        <div className="bento-card-content">
+          <AboutMe bio={bioNew} />
+          <Services />
+          <Clients />
+          <Testimonials />
         </div>
-
-        {/* Card 3: Recent Works */}
-        <div className="bento-card card-works">
-          <div className="bento-card-header">
-            <i className="fa fa-object-ungroup" aria-hidden="true"></i>
-            <span>Recent Works</span>
-          </div>
-          <div className="bento-card-content">
-            <RecentWorks />
-            <Quote />
-          </div>
-        </div>
-
-        {/* Card 4: Contact */}
-        <div className="bento-card card-contact">
-          <div className="bento-card-header">
-            <i className="fa fa-envelope-o" aria-hidden="true"></i>
-            <span>Contact & Inquiries</span>
-          </div>
-          <div className="bento-card-content">
-            <ContactInfo />
-            <ContactForm />
-          </div>
-        </div>
-
       </div>
+
+      {/* ROW 2 MIDDLE: About Me */}
+      <div className="bento-card card-about">
+        <div className="bento-card-header">
+          <i className="fa fa-list-alt" aria-hidden="true"></i>
+          <span>Skills & Resumé</span>
+        </div>
+        <div className="bento-card-content">
+          <Skills />
+          <ResumeSection />
+        </div>
+      </div>
+
+      {/* ROW 2 RIGHT: Skills & Resumé */}
+      <div className="bento-card card-resume">
+        <div className="bento-card-header">
+          <i className="fa fa-object-ungroup" aria-hidden="true"></i>
+          <span>Recent Works</span>
+        </div>
+        <div className="bento-card-content">
+          <RecentWorks />
+          <Quote />
+        </div>
+      </div>
+
+      {/* ROW 3 BOTTOM: Contact (spans all 3 columns) */}
+      <div className="bento-card card-contact">
+        <div className="bento-card-header">
+          <i className="fa fa-envelope-o" aria-hidden="true"></i>
+          <span>Contact & Inquiries</span>
+        </div>
+        <div className="bento-card-content">
+          <ContactInfo />
+          <ContactForm />
+        </div>
+      </div>
+
     </Layout>
   );
 };
