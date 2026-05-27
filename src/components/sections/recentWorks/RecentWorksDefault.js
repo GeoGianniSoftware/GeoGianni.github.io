@@ -145,7 +145,7 @@ const RecentWorksDefault = () => {
                         <div className="blog-detail">Video Game</div>
                         <div className="blog-content">
                         </div>
-                        <a href="https://www.beratone.game/en-US" target="_blank" className="button">
+                        <a href="https://www.youtube.com/watch?v=BVFp_yhEag0" target="_blank" className="button">
                           <span className="text">View Project Page</span>
                           <span className="arrow" />
                         </a>

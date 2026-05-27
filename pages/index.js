@@ -78,8 +78,8 @@ const IndexDark = () => {
           <TypingAnimation />
           <div className="social">
             
-          {/* centered GitHub button */}
-<div className="github-row">
+          {/* centered GitHub button with 1-Pager View toggle */}
+<div className="github-row" style={{ display: "flex", gap: "12px", justifyContent: "center", marginTop: "10px" }}>
   <a
     href="https://github.com/GeoGianniSoftware"
     target="_blank"
@@ -89,6 +89,15 @@ const IndexDark = () => {
   >
     <i className="fa fa-github" aria-hidden="true" />
     <span> My GitHub</span>
+  </a>
+  <a
+    href="/one-page"
+    className="github-btn"
+    style={{ background: "#ff3344", borderColor: "#ff3344" }}
+    aria-label="View 1-Pager Dashboard"
+  >
+    <i className="fa fa-th-large" aria-hidden="true" />
+    <span> 1-Pager View</span>
   </a>
 </div>
 
@@ -128,7 +137,6 @@ const IndexDark = () => {
         </Blog>
         <Contact>
           <ContactInfo />
-          <ContactForm />
         </Contact>
       </ContentContainer>
     </Layout>
