@@ -3,88 +3,52 @@
   Author: Antigravity AI
 */
 
-@media (min-width: 1024px) {
-  /* Center and size the container on desktop to be a sleek desktop dashboard application */
+/* Scale down skill chips to 80% size for a streamlined layout */
+.skill-chip {
+  font-size: 0.8rem !important;
+  padding: 6px 10px !important;
+}
+
+/* Force page to scroll naturally on desktop when content height exceeds viewport */
+.page {
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100vh !important;
+}
+
+/* 1. LARGE DESKTOP & ULTRA-WIDE VIEWPORTS (width >= 1200px) */
+@media (min-width: 1200px) {
   .onepage-dashboard {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    position: relative !important;
+    margin: 6vh auto !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
     width: 95vw !important;
     max-width: 1350px !important;
-    /* Lock height to a stable, designed dimension to keep logo/title/buttons perfectly proportional */
+    /* Lock grid container height to template proportions */
     height: 670px !important;
     display: grid !important;
-    /* Set left column to a spacious 420px for the profile, and let right area take the rest */
     grid-template-columns: 420px 1fr !important;
     gap: 24px !important;
-    margin: 0 !important;
     z-index: 11 !important;
-    transition: none !important;
     background: transparent !important;
   }
 
-  /* Override template-specific hardcoded widths and floats on the profile card */
+  /* Force profile card to cleanly fit the grid column without overlapping */
   .onepage-dashboard .card-started {
     width: 100% !important;
     float: none !important;
     height: 100% !important;
     position: relative !important;
     margin: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    background: #1e1e1f !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2) !important;
-    overflow: hidden !important;
-    z-index: 11 !important;
   }
 
-  /* Fix profile inner elements so they render spacious and aligned */
-  .onepage-dashboard .card-started .profile {
-    padding: 40px !important;
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Retain standard template clearance and alignment ratios */
-  .onepage-dashboard .card-started .profile.no-photo {
-    padding-top: 40px !important;
-  }
-  
-  .onepage-dashboard .card-started .profile.no-photo .title {
-    margin-top: 240px !important;
-  }
-
+  /* Force contain on the background image to prevent logo cropping */
   .onepage-dashboard .card-started .profile.no-photo .slide {
-    height: 57% !important;
-    background-size: cover !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
     background-position: center top !important;
-    border-radius: 12px 12px 0 0 !important;
-  }
-
-  /* Symmetrical, beautiful spacing for layout toggle button row */
-  .onepage-dashboard .card-started .social {
-    margin-top: 20px !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-
-  /* Ensure actions/buttons wrapper sits exactly at the bottom of the parent card */
-  .onepage-dashboard .card-started .lnks {
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 70px !important;
-    z-index: 12 !important;
   }
 
   /* The Bento Grid Container for content panels */
@@ -112,7 +76,7 @@
   }
 
   .onepage-dashboard .bento-card:hover {
-    border-color: rgba(255, 51, 68, 0.25) !important; /* soft red hover glow matching site accent */
+    border-color: rgba(255, 51, 68, 0.25) !important; /* soft red hover glow */
     transform: translateY(-2px) !important;
   }
 
@@ -132,7 +96,7 @@
   }
 
   .onepage-dashboard .bento-card-header i {
-    color: #ff3344 !important; /* Red accent matching website styling */
+    color: #ff3344 !important;
     font-size: 16px !important;
   }
 
@@ -163,7 +127,75 @@
   }
 }
 
-/* Tablet & Mobile Breakpoints for a single nonstop continuous scroll */
+/* 2. LAPTOP & MID-SIZE VIEWPORTS (1024px - 1199px)
+   Prevents squeezed bento boxes by layout stacking content side-by-side with profile */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .onepage-dashboard {
+    position: relative !important;
+    margin: 40px auto !important;
+    width: 92% !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: 360px 1fr !important;
+    gap: 24px !important;
+  }
+
+  .onepage-dashboard .card-started {
+    height: 600px !important;
+    width: 100% !important;
+    float: none !important;
+    position: relative !important;
+  }
+
+  .onepage-dashboard .card-started .profile.no-photo .slide {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+  }
+
+  .onepage-dashboard .dashboard-content-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    height: auto !important;
+  }
+
+  .onepage-dashboard .bento-card {
+    background: #1e1e1f !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    overflow: visible !important;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .onepage-dashboard .bento-card-header {
+    padding: 16px 24px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .onepage-dashboard .bento-card-header i {
+    color: #ff3344 !important;
+  }
+
+  .onepage-dashboard .bento-card-content {
+    padding: 24px !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* 3. MOBILE & TABLET VIEWPORTS (width < 1024px) */
 @media (max-width: 1023px) {
   .onepage-dashboard {
     margin: 80px auto 30px auto !important;
@@ -185,6 +217,12 @@
     margin: 0 !important;
     height: auto !important;
     min-height: 560px !important;
+  }
+
+  .onepage-dashboard .card-started .profile.no-photo .slide {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
   }
 
   .onepage-dashboard .dashboard-content-grid {
