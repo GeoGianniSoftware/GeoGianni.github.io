@@ -1,28 +1,20 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import About from "../src/components/About";
-import Blog from "../src/components/Blog";
-import Contact from "../src/components/Contact";
-import Home from "../src/components/Home";
-import Resume from "../src/components/Resume";
+import { useEffect } from "react";
 import AboutMe from "../src/components/sections/AboutMe";
-import BlogSection from "../src/components/sections/Blog";
 import Clients from "../src/components/sections/Clients";
 import ContactForm from "../src/components/sections/ContactForm";
 import ContactInfo from "../src/components/sections/ContactInfo";
-import FunFact from "../src/components/sections/FunFact";
-import Pricing from "../src/components/sections/Pricing";
-import Quote from "../src/components/sections/Quote";
 import ResumeSection from "../src/components/sections/Resume";
 import Services from "../src/components/sections/Services";
 import Skills from "../src/components/sections/Skills";
 import ToolsWorkflow from "../src/components/sections/ToolsWorkflow";
 import Testimonials from "../src/components/sections/Testimonials";
 import TypingAnimation from "../src/components/TypingAnimation";
-import Work from "../src/components/Work";
-import ContentContainer from "../src/layout/ContentContainer";
-import Header from "../src/layout/Header";
+import Quote from "../src/components/sections/Quote";
 import Layout from "../src/layout/Layout";
+import { createSkillsDot, dotResize } from "../src/utils";
+
 const RecentWorks = dynamic(
   () => import("../src/components/sections/RecentWorks"),
   {
@@ -31,9 +23,11 @@ const RecentWorks = dynamic(
 );
 
 const bioNew = `
+<br>
 <div>
 <p>
 My name is <span class="highlight-name">Gianni Rivero</span>,
+<br>
 I am a Senior Unity Engineer specializing in performance optimization, systems architecture, and multiplayer.
 <br><br>
 I've worked across full production pipelines, building core infrastructure with Photon's Quantum 3 deterministic multiplayer engine, leading cross-disciplinary teams,
@@ -46,30 +40,24 @@ My contributions have supported successful partnerships and secured projects mul
 </div>
 `;
 
-const bio = `
-<div>
-<p>
-My name is <span class="highlight-name">Gianni Rivero</span>,
-<br><br>
-I am a Senior Game Developer specializing in Unity with expertise in multiplayer systems, tools engineering, and content pipelines.
-<br><br>
-I've led cross-disciplinary teams, built core infrastructure with Photon's Quantum 3 Deterministic Multiplayer Engine,
-and delivered large scale player-facing features from quests and NPC systems to level design workflows.
-<br><br>
-My work has supported successful partnerships and helped secure multi-million dollar investment.</u>
-</p>
-</div>
-`;
-const IndexDark = () => {
+const OnePageDashboard = () => {
+  useEffect(() => {
+    dotResize();
+    setTimeout(createSkillsDot, 1000);
+  }, []);
+
   return (
-    <Layout bg={"blured"}>
+    <Layout bg={"blured"} containerCls="onepage-dashboard">
       <Head>
         <link rel="stylesheet" href="css/new-skin/new-skin.css" />
         <link rel="stylesheet" href="css/template-dark/dark.css" />
         <link rel="stylesheet" href="css/new-skin/minimal-skin.css" />
+        <link rel="stylesheet" href="css/onepage-dashboard.css" />
+        <title>Geo Gianni Games Dashboard</title>
       </Head>
-      <Header />
-      <Home>
+
+      {/* ROW 1 TOP: Profile Card (spans all 3 columns) */}
+      <div className="card-started" id="home-card">
         <div className="profile no-photo">
           <div
             className="slide"
@@ -77,71 +65,86 @@ const IndexDark = () => {
           />
           <div className="title">Geo Gianni Games</div>
           <TypingAnimation />
+
           <div className="social">
-            
-          {/* centered GitHub button with 1-Pager View toggle */}
-<div className="github-row" style={{ display: "flex", gap: "12px", justifyContent: "center", marginTop: "10px" }}>
-  <a
-    href="https://github.com/GeoGianniSoftware"
-    target="_blank"
-    rel="noreferrer"
-    className="github-btn"
-    aria-label="View my GitHub profile"
-  >
-    <i className="fa fa-github" aria-hidden="true" />
-    <span> My GitHub</span>
-  </a>
-  <a
-    href="/one-page"
-    className="github-btn"
-    style={{ background: "#ff3344", borderColor: "#ff3344" }}
-    aria-label="View 1-Pager Dashboard"
-  >
-    <i className="fa fa-th-large" aria-hidden="true" />
-    <span> 1-Pager View</span>
-  </a>
-</div>
-
-
+            <div className="github-row" style={{ display: "flex", gap: "12px", justifyContent: "center", marginTop: "10px" }}>
+              <a
+                href="https://github.com/GeoGianniSoftware"
+                target="_blank"
+                rel="noreferrer"
+                className="github-btn"
+                aria-label="View my GitHub profile"
+              >
+                <i className="fa fa-github" aria-hidden="true" />
+                <span> My GitHub</span>
+              </a>
+              <a
+                href="/tabbed"
+                className="github-btn"
+                style={{ background: "#ff3344", borderColor: "#ff3344" }}
+                aria-label="View Tabbed Layout"
+              >
+                <i className="fa fa-clone" aria-hidden="true" />
+                <span> Tabbed View</span>
+              </a>
+            </div>
           </div>
+
           {/* profile buttons */}
           <div className="lnks">
             <a href="https://geogianni.com/assets/docs/GianniRiveroResume.docx" download="GeoGianniGamesResume" target="_blank" className="lnk">
               <span className="text">Download CV</span>
-              <span class="ion ion-ios-cloud-download"></span>
+              <span className="ion ion-ios-cloud-download"></span>
             </a>
-            <a href="mailto:GeoGianniSoftware@gmail.com?subject=This%20is%20a%20subject" className="lnk discover">
+            <a href="mailto:GeoGianniSoftware@gmail.com?subject=Inquiry" className="lnk discover">
               <span className="text">Contact Me</span>
-              <span class="ion ion-paper-airplane"></span>
+              <span className="ion ion-paper-airplane"></span>
             </a>
           </div>
         </div>
-      </Home>
-      <ContentContainer>
-        <About>
+      </div>
+
+      {/* ROW 2 LEFT: About, Services, Clients, Testimonials */}
+      <div className="bento-card card-col-1">
+        <div className="bento-card-content">
           <AboutMe bio={bioNew} />
           <Services />
           <Clients />
           <Testimonials />
-          {/*<Pricing />*/}
-        </About>
-        <Resume>
+        </div>
+      </div>
+
+      {/* ROW 2 MIDDLE: Skills, Tools & Workflow, Resume */}
+      <div className="bento-card card-col-2">
+        <div className="bento-card-content">
           <Skills />
           <ToolsWorkflow />
           <ResumeSection />
-        </Resume>
-        <Work>
+        </div>
+      </div>
+
+      {/* ROW 2 RIGHT: Recent Works & Quote */}
+      <div className="bento-card card-col-3">
+        <div className="bento-card-content">
           <RecentWorks />
           <Quote />
-        </Work>
-        <Blog>
-          <BlogSection />
-        </Blog>
-        <Contact>
+        </div>
+      </div>
+
+      {/* ROW 3 BOTTOM: Contact (spans all 3 columns) */}
+      <div className="bento-card card-contact">
+        <div className="bento-card-header">
+          <i className="fa fa-envelope-o" aria-hidden="true"></i>
+          <span>Contact & Inquiries</span>
+        </div>
+        <div className="bento-card-content">
           <ContactInfo />
-        </Contact>
-      </ContentContainer>
+          <ContactForm />
+        </div>
+      </div>
+
     </Layout>
   );
 };
-export default IndexDark;
+
+export default OnePageDashboard;
