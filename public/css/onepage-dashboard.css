@@ -41,20 +41,24 @@
     background: transparent !important;
   }
 
+  .onepage-dashboard .card-started .profile.no-photo .title {
+	margin-top: 160px;
+}
+
   /* Row 1: profile card spans full width */
   .onepage-dashboard .card-started {
     grid-column: 1 / -1 !important;
     width: 100% !important;
     float: none !important;
     /* Explicit height: new-skin sets height:100% which collapses in a grid auto row */
-    height: 400px !important;
+    height: 520px !important;
     overflow: hidden !important;
   }
 
   /* Row 2: three equal columns */
-  .onepage-dashboard .card-works  { grid-column: 1 !important; }
-  .onepage-dashboard .card-about  { grid-column: 2 !important; }
-  .onepage-dashboard .card-resume { grid-column: 3 !important; }
+  .onepage-dashboard .card-col-1  { grid-column: 1 !important; }
+  .onepage-dashboard .card-col-2  { grid-column: 2 !important; }
+  .onepage-dashboard .card-col-3 { grid-column: 3 !important; }
 
   /* Row 3: contact spans full width */
   .onepage-dashboard .card-contact {
@@ -72,7 +76,7 @@
 
   /* Push title/content below the 260px slide */
   .onepage-dashboard .card-started .profile.no-photo {
-    padding-top: 270px !important;
+    padding-top: -135px !important;
   }
 
   /* Shared bento tile styles */
@@ -151,9 +155,9 @@
   }
 
   /* Bento cards stack vertically in the right column */
-  .onepage-dashboard .card-works,
-  .onepage-dashboard .card-about,
-  .onepage-dashboard .card-resume,
+  .onepage-dashboard .card-col-1,
+  .onepage-dashboard .card-col-2,
+  .onepage-dashboard .card-col-3,
   .onepage-dashboard .card-contact {
     grid-column: 2 !important;
   }
@@ -256,4 +260,65 @@
   }
   .onepage-dashboard .card-started { min-height: 500px !important; }
   .onepage-dashboard .bento-card-content { padding: 16px !important; }
+}
+
+/* Client logos: single row, vertically centered under divider */
+.onepage-dashboard .client-items {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 24px !important;
+  margin: 0 auto !important;
+}
+
+.onepage-dashboard .client-items .col {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+.onepage-dashboard .client-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.onepage-dashboard .client-item .image {
+  width: 80px !important;
+  height: 80px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+.onepage-dashboard .client-item .image img {
+  max-width: 80px !important;
+  max-height: 80px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Testimonial inactive pips: more visible */
+.onepage-dashboard .swiper-pagination .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.35) !important;
+  opacity: 1 !important;
+}
+
+.onepage-dashboard .swiper-pagination .swiper-pagination-bullet-active {
+  background: #ff3344 !important;
+}
+
+/* Testimonial page counter */
+.onepage-dashboard .testimonial-counter {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
 }

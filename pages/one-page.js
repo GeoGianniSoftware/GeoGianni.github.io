@@ -8,6 +8,7 @@ import ContactInfo from "../src/components/sections/ContactInfo";
 import ResumeSection from "../src/components/sections/Resume";
 import Services from "../src/components/sections/Services";
 import Skills from "../src/components/sections/Skills";
+import ToolsWorkflow from "../src/components/sections/ToolsWorkflow";
 import Testimonials from "../src/components/sections/Testimonials";
 import TypingAnimation from "../src/components/TypingAnimation";
 import Quote from "../src/components/sections/Quote";
@@ -22,9 +23,11 @@ const RecentWorks = dynamic(
 );
 
 const bioNew = `
+<br>
 <div>
 <p>
 My name is <span class="highlight-name">Gianni Rivero</span>,
+<br>
 I am a Senior Unity Engineer specializing in performance optimization, systems architecture, and multiplayer.
 <br><br>
 I've worked across full production pipelines, building core infrastructure with Photon's Quantum 3 deterministic multiplayer engine, leading cross-disciplinary teams,
@@ -50,7 +53,7 @@ const OnePageDashboard = () => {
         <link rel="stylesheet" href="css/template-dark/dark.css" />
         <link rel="stylesheet" href="css/new-skin/minimal-skin.css" />
         <link rel="stylesheet" href="css/onepage-dashboard.css" />
-        <title>GeoGianni Games - 1-Pager Dashboard</title>
+        <title>Geo Gianni Games Dashboard</title>
       </Head>
 
       {/* ROW 1 TOP: Profile Card (spans all 3 columns) */}
@@ -101,12 +104,8 @@ const OnePageDashboard = () => {
         </div>
       </div>
 
-      {/* ROW 2 LEFT: Recent Works */}
-      <div className="bento-card card-works">
-        <div className="bento-card-header">
-          <i className="fa fa-user-o" aria-hidden="true"></i>
-          <span>About Me</span>
-        </div>
+      {/* ROW 2 LEFT: About, Services, Clients, Testimonials */}
+      <div className="bento-card card-col-1">
         <div className="bento-card-content">
           <AboutMe bio={bioNew} />
           <Services />
@@ -115,24 +114,17 @@ const OnePageDashboard = () => {
         </div>
       </div>
 
-      {/* ROW 2 MIDDLE: About Me */}
-      <div className="bento-card card-about">
-        <div className="bento-card-header">
-          <i className="fa fa-list-alt" aria-hidden="true"></i>
-          <span>Skills & Resumé</span>
-        </div>
+      {/* ROW 2 MIDDLE: Skills, Tools & Workflow, Resume */}
+      <div className="bento-card card-col-2">
         <div className="bento-card-content">
           <Skills />
+          <ToolsWorkflow />
           <ResumeSection />
         </div>
       </div>
 
-      {/* ROW 2 RIGHT: Skills & Resumé */}
-      <div className="bento-card card-resume">
-        <div className="bento-card-header">
-          <i className="fa fa-object-ungroup" aria-hidden="true"></i>
-          <span>Recent Works</span>
-        </div>
+      {/* ROW 2 RIGHT: Recent Works & Quote */}
+      <div className="bento-card card-col-3">
         <div className="bento-card-content">
           <RecentWorks />
           <Quote />

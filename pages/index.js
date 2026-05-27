@@ -16,6 +16,7 @@ import Quote from "../src/components/sections/Quote";
 import ResumeSection from "../src/components/sections/Resume";
 import Services from "../src/components/sections/Services";
 import Skills from "../src/components/sections/Skills";
+import ToolsWorkflow from "../src/components/sections/ToolsWorkflow";
 import Testimonials from "../src/components/sections/Testimonials";
 import TypingAnimation from "../src/components/TypingAnimation";
 import Work from "../src/components/Work";
@@ -126,6 +127,7 @@ const IndexDark = () => {
         </About>
         <Resume>
           <Skills />
+          <ToolsWorkflow />
           <ResumeSection />
         </Resume>
         <Work>

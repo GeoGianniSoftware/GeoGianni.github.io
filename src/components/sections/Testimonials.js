@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SwiperCore, {
   Autoplay,
   EffectFade,
@@ -7,7 +8,9 @@ import SwiperCore, {
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Pagination, Navigation, EffectFade, Autoplay, Grid]);
+const TOTAL_SLIDES = 4;
 const Testimonials = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
   const props = {
     loop: true,
     autoplay: {
@@ -16,6 +19,9 @@ const Testimonials = () => {
     },
     pagination: {
       el: ".swiper-pagination",
+    },
+    onSlideChange: (swiper) => {
+      setActiveIndex(swiper.realIndex + 1);
     },
   };
   return (
@@ -106,6 +112,7 @@ const Testimonials = () => {
               </SwiperSlide>
               <div className="swiper-pagination"></div>
             </Swiper>
+            <div className="testimonial-counter">({activeIndex}/{TOTAL_SLIDES})</div>
           </div>
         </div>
         <div className="clear" />
