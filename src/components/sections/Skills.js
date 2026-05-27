@@ -7,43 +7,80 @@ const Slice = () => (
   </div>
 );
 
-const ALL_SKILLS = [
-  // Core Specialization (TOP SIGNAL)
+const PERFORMANCE_SKILLS = [
   "Unity Performance Optimization",
-  "Systems Architecture",
-  "Multiplayer Systems",
+  "Unity Profiler / Profile Analyzer",
+  "Burst Compiler & Job System",
+  "IL2CPP / AOT",
+  "Memory Profiling & GC Tuning",
+  "Frame Budget Analysis",
+  "Addressables / Asset Bundles",
   "Open World Streaming",
   "LOD Systems",
-  "Rendering Optimization",
-
-  // Supporting Systems
-  "Data-Driven Systems",
-  "Tooling & Pipeline Development",
-  "Gameplay Systems",
-  "Deterministic Networking",
-  "ECS Architectures",
-
-  // Technical Stack (minimal, intentional)
-  "Unity3D",
-  "C#",
-  "HLSL",
-  "Photon Quantum"
+  "Rendering Optimization"
 ];
+
+const ARCHITECTURE_SKILLS = [
+  "ScriptableObject Architecture",
+  "Event-Driven Architecture",
+  "Custom Editor Tooling",
+  "Modular Package Design",
+  "Save System / Serialization",
+  "Data-Driven Systems",
+  "ECS Architectures",
+  "Tooling & Pipeline Development",
+  "Gameplay Systems"
+];
+
+const MULTIPLAYER_SKILLS = [
+  "Deterministic Networking",
+  "Rollback Netcode",
+  "Client-Side Prediction & Reconciliation",
+  "Lag Compensation",
+  "Snapshot Interpolation",
+  "Authoritative Server Design"
+];
+
+const SkillCategory = ({ icon, label, items }) => (
+  <div className="skill-category">
+    <div className="skill-category-header">
+      <i className={icon} aria-hidden="true" />
+      <span>{label}</span>
+    </div>
+    <div className="skills-wide">
+      <ul className="skills-strip">
+        {items.map((s) => (
+          <li key={s} className="skill-chip">{s}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+);
 
 const Skills = () => {
   return (
-<Fragment>
+    <Fragment>
       <div className="content skills">
         <div className="title">Skills</div>
 
-        {/* single wide section */}
-        <div className="skills-wide border-line-h">
-          <ul className="skills-strip">
-            {ALL_SKILLS.map((s) => (
-              <li key={s} className="skill-chip">{s}</li>
-            ))}
-          </ul>
-        </div>
+        <SkillCategory
+          icon="fa fa-bolt"
+          label="Performance Optimization"
+          items={PERFORMANCE_SKILLS}
+        />
+
+        <SkillCategory
+          icon="fa fa-sitemap"
+          label="Systems Architecture"
+          items={ARCHITECTURE_SKILLS}
+        />
+
+        <SkillCategory
+          icon="fa fa-globe"
+          label="Multiplayer Systems"
+          items={MULTIPLAYER_SKILLS}
+        />
+
       </div>
     </Fragment>
   );

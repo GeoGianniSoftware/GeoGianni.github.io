@@ -268,6 +268,114 @@ img.mfp-img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* Resume entry icon — rounded square project image */
+.resume-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.resume-item-icon {
+  width: 72px;
+  height: 72px;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Resume standout chips — quantified achievements for ATS and hiring managers */
+.resume-standouts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 10px 0;
+}
+
+.resume-standout {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  border: 1px solid rgba(255, 51, 68, 0.25);
+  border-left: 3px solid #ff3344;
+  border-radius: 4px;
+  background: rgba(255, 51, 68, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.3px;
+  line-height: 1.35;
+}
+
+/* Tool-built callout — custom tool authored per role */
+.resume-tool {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0 14px 0;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.4;
+}
+
+.resume-tool i {
+  color: #ff3344;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.resume-tool .tool-name {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Categorized Skills sections — used in both tabbed and one-page views */
+.skill-category {
+  margin-top: 18px;
+}
+
+.skill-category:first-of-type {
+  margin-top: 8px;
+}
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px 0;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 51, 68, 0.18);
+}
+
+.skill-category-header i {
+  color: #ff3344;
+  font-size: 14px;
+}
+
+.skill-category.technical-stack .skill-category-header {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.55);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.skill-category.technical-stack .skill-category-header i {
+  font-size: 12px;
+  color: rgba(255, 51, 68, 0.7);
+}
+
 .card-started .profile .typed-cursor {
   display: inline!important;
   }

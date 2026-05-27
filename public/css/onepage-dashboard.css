@@ -23,7 +23,7 @@
      [ card-works ] [ card-about ] [ card-resume ]  <- Row 2
      [   card-contact   spans 3   ]   <- Row 3 bottom capstone
    =========================================================== */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .onepage-dashboard {
     position: relative !important;
     margin: 6vh auto !important;
@@ -129,73 +129,7 @@
 }
 
 /* ===========================================================
-   2. LAPTOP / MID-SIZE (1024px – 1199px)
-   Profile card on left, bento cards stack vertically on right
-   =========================================================== */
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .onepage-dashboard {
-    position: relative !important;
-    margin: 40px auto !important;
-    width: 92% !important;
-    height: auto !important;
-    display: grid !important;
-    grid-template-columns: 360px 1fr !important;
-    gap: 24px !important;
-  }
-
-  /* Profile card stays in its own left column, natural height */
-  .onepage-dashboard .card-started {
-    grid-column: 1 !important;
-    grid-row: 1 / 4 !important;   /* span rows 1-3 alongside stacked cards */
-    height: 600px !important;
-    width: 100% !important;
-    float: none !important;
-    position: relative !important;
-    align-self: start !important;
-  }
-
-  /* Bento cards stack vertically in the right column */
-  .onepage-dashboard .card-col-1,
-  .onepage-dashboard .card-col-2,
-  .onepage-dashboard .card-col-3,
-  .onepage-dashboard .card-contact {
-    grid-column: 2 !important;
-  }
-
-  .onepage-dashboard .bento-card {
-    background: #1e1e1f !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 12px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  .onepage-dashboard .bento-card-header {
-    padding: 16px 24px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-    font-weight: 600 !important;
-    font-size: 14px !important;
-    color: #ffffff !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1.5px !important;
-  }
-
-  .onepage-dashboard .bento-card-header i { color: #ff3344 !important; }
-
-  .onepage-dashboard .bento-card-content {
-    padding: 24px !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-}
-
-/* ===========================================================
-   3. MOBILE & TABLET (< 1024px) — unchanged, already perfect
+   2. MOBILE & TABLET (< 1024px)
    =========================================================== */
 @media (max-width: 1023px) {
   .onepage-dashboard {
@@ -262,29 +196,41 @@
   .onepage-dashboard .bento-card-content { padding: 16px !important; }
 }
 
-/* Client logos: single row, vertically centered under divider */
-.onepage-dashboard .client-items {
+/* Client logos: override template .row/.col system entirely within one-page */
+.onepage-dashboard .row.client-items {
   display: flex !important;
   flex-wrap: nowrap !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 24px !important;
   margin: 0 auto !important;
+  font-size: 14px !important;
 }
 
-.onepage-dashboard .client-items .col {
-  flex: 0 0 auto !important;
+.onepage-dashboard .row.client-items::before,
+.onepage-dashboard .row.client-items::after,
+.onepage-dashboard .row.client-items > .clear {
+  display: none !important;
+}
+
+.onepage-dashboard .row.client-items > .col {
+  display: block !important;
+  float: none !important;
   width: auto !important;
   max-width: none !important;
   padding: 0 !important;
-  float: none !important;
+  flex: 0 0 auto !important;
+  font-size: 14px !important;
+}
+
+.onepage-dashboard .row.client-items > .col.border-line-v::before {
+  display: none !important;
 }
 
 .onepage-dashboard .client-item {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  text-align: center !important;
 }
 
 .onepage-dashboard .client-item .image {
@@ -293,7 +239,7 @@
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin: 0 auto !important;
+  margin: 0 !important;
 }
 
 .onepage-dashboard .client-item .image img {

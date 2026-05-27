@@ -1,23 +1,23 @@
 import { Fragment } from "react";
 
+const TECHNICAL_STACK = [
+  "Unity3D",
+  "C#",
+  "HLSL",
+  "Photon Quantum"
+];
+
 const TOOLS_WORKFLOW = [
-  // AI & Development Processes
   "AI-Assisted Tooling",
   "Agentic Development Assistance",
   "Collaborative Documentation",
-
-  // Project Management & Planning
   "Milestone-Based Development",
   "Sprint Planning",
   "Technical Debt Management",
-
-  // Development Practices
   "Unit Testing",
   "Dependency Injection",
   "Code Review Process",
   "Architectural Design Patterns",
-
-  // Tools & Infrastructure
   "Git Version Control",
   "Performance Profiling",
   "Notion",
@@ -30,7 +30,20 @@ const ToolsWorkflow = () => {
       <div className="content skills">
         <div className="title">Tools & Workflow</div>
 
-        {/* single wide section */}
+        <div className="skill-category technical-stack">
+          <div className="skill-category-header">
+            <i className="fa fa-cog" aria-hidden="true" />
+            <span>Technical Stack</span>
+          </div>
+          <div className="skills-wide">
+            <ul className="skills-strip">
+              {TECHNICAL_STACK.map((s) => (
+                <li key={s} className="skill-chip">{s}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         <div className="skills-wide border-line-h">
           <ul className="skills-strip">
             {TOOLS_WORKFLOW.map((tool) => (
