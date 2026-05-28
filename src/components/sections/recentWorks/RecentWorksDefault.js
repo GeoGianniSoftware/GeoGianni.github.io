@@ -261,8 +261,8 @@ const RecentWorksDefault = () => {
                         <h1>Saturday Night Live</h1>
                         <div className="blog-detail">Television Show</div>
                         <div className="blog-content">
-                        <div class="video-background"> 
-                          <div class="video-foreground">
+                        <div className="video-background">
+                          <div className="video-foreground">
                           <iframe width="560" height="315" src="https://www.youtube.com/embed/oPyx4JRCQ88?si=9iUf4lgHEzyr9XDY" title="SNL Clip" frameBorder="0" allowFullScreen></iframe>
                           </div>
                         </div>

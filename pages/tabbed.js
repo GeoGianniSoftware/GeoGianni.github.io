@@ -76,7 +76,7 @@ const IndexDark = () => {
             style={{ backgroundImage: "url(images/CorpotateLogo.png)" }}
           />
           <div className="title">Geo Gianni Games</div>
-          <TypingAnimation />
+          <div className="subtitle">Senior Unity Engineer</div>
           <div className="social">
             
           {/* centered GitHub button with 1-Pager View toggle */}

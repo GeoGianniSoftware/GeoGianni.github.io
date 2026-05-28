@@ -22,6 +22,22 @@ const AboutMe = ({ bio }) => {
 
         {/* content */}
         <div className="about-container">
+          {/* Headshot + Name intro */}
+          <div className="about-intro">
+            <img
+              src="images/man1.jpg"
+              alt="Gianni Rivero"
+              className="about-headshot"
+            />
+            <div className="about-intro-text">
+              My name is <span className="highlight-name">Gianni Rivero</span>,<br />
+              I am a Senior Unity Engineer.
+            </div>
+          </div>
+          <div className="about-specialize">
+            I specialize in <span className="highlight-name">Performance Optimization</span>, <span className="highlight-name">Systems Architecture</span>, and <span className="highlight-name">Multiplayer</span>.
+          </div>
+
           {/* Bio */}
           <div
             className="about-bio"

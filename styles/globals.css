@@ -376,6 +376,49 @@ img.mfp-img {
   color: rgba(255, 51, 68, 0.7);
 }
 
+/* About Me — headshot + bio intro layout */
+.about-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.about-intro-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+  align-self: center;
+}
+
+.about-specialize {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.about-headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--main-site-resume-a);
+  box-shadow: 0 4px 20px rgba(255, 51, 68, 0.15);
+  margin-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .about-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-headshot {
+    width: 110px;
+    height: 110px;
+  }
+}
+
 .card-started .profile .typed-cursor {
   display: inline!important;
   }

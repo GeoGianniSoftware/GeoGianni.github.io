@@ -16,7 +16,7 @@ export default Background;
 
 const BackgroundBlured = () => {
   return (
-    <div class="blured-background">
+    <div className="blured-background">
     <span></span>
     <span></span>
     <span></span>
